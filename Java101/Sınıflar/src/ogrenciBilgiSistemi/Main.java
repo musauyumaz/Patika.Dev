@@ -12,18 +12,18 @@ public class Main {
 
         mat.addTeacher(teacher1);
         fizik.addTeacher(teacher2);
-        mat.addTeacher(teacher3);
+        kimya.addTeacher(teacher3);
 
         Student student1 = new Student("İnek Şaban", 4, "140144015", mat, fizik, kimya);
-        student1.addBulkExamNote(50,20,40);
+        student1.addBulkExamNote(50,20,40,70,90,80);
         student1.isPass();
 
         Student student2 = new Student("Güdük Necmi", 4, "2211133", mat, fizik, kimya);
-        student2.addBulkExamNote(100,50,40);
+        student2.addBulkExamNote(100,50,40,75,30,65);
         student2.isPass();
 
         Student student3 = new Student("Hayta İsmail", 4, "221121312", mat, fizik, kimya);
-        student3.addBulkExamNote(50,20,40);
+        student3.addBulkExamNote(50,20,40,90,80,100);
         student3.isPass();
     }
 }
