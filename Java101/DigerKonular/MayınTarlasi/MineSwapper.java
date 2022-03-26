@@ -92,21 +92,48 @@ public class MineSwapper {
 
     private void bombaSayisiYaz(String[][] mayinBulunacakTarla, String[][] sayiYazilacakTarla, int satir, int sutun) {
         int sayac = 0;
-        if (satir != 0 && sutun != 0 && satir != mayinBulunacakTarla.length && sutun != mayinBulunacakTarla[0].length) {
-            sayac = bombaBul(mayinBulunacakTarla, satir, sutun);
-            tarlaYazdir(sayiYazilacakTarla);
-            sayiYazilacakTarla[satir][sutun] = " " + sayac + " ";
-        } else if ((satir + 1) >= mayinBulunacakTarla.length && (sutun + 1) >= mayinBulunacakTarla[0].length) {
+        int baslangicSatiri = satir - 1;
+        int baslangicSutunu = sutun - 1;
+        int bitisSatir = satir + 1;
+        int bitisSutun = sutun + 1;
+        if (baslangicSatiri != 0 && baslangicSutunu != 0 && bitisSatir != mayinBulunacakTarla.length && bitisSutun != mayinBulunacakTarla[0].length) {
+            sayac = bombaBul(mayinBulunacakTarla, baslangicSatiri, baslangicSutunu, bitisSatir, bitisSutun);
 
         }
+        if (baslangicSutunu <= 0 && bitisSutun <= 0) {
+            baslangicSutunu += 1;
+            baslangicSatiri += 1;
+            sayac = bombaBul(mayinBulunacakTarla, baslangicSatiri, baslangicSutunu, bitisSatir, bitisSutun);
+        }
+        if (bitisSatir >= mayinBulunacakTarla.length) {
+            bitisSatir -= 1;
+            sayac = bombaBul(mayinBulunacakTarla, baslangicSatiri, baslangicSutunu, bitisSatir, bitisSutun);
+        }
+        if (baslangicSatiri <= 0) {
+            baslangicSatiri += 1;
+            sayac = bombaBul(mayinBulunacakTarla, baslangicSatiri, baslangicSutunu, bitisSatir, bitisSutun);
+        }
+        if (bitisSutun >= mayinBulunacakTarla[0].length) {
+            bitisSutun -= 1;
+            sayac = bombaBul(mayinBulunacakTarla, baslangicSatiri, baslangicSutunu, bitisSatir, bitisSutun);
+
+        }
+        if (baslangicSutunu <= 0) {
+            baslangicSutunu += 1;
+            sayac = bombaBul(mayinBulunacakTarla, baslangicSatiri, baslangicSutunu, bitisSatir, bitisSutun);
+
+        }
+
+        sayiYazilacakTarla[satir][sutun] = " " + sayac + " ";
+        tarlaYazdir(sayiYazilacakTarla);
 
 
     }
 
-    private int bombaBul(String[][] mayinBulunacakTarla, int satir, int sutun) {
+    private int bombaBul(String[][] mayinBulunacakTarla, int baslangicSatir, int baslangicSutun, int bitisSatir, int bitisSutun) {
         int sayac = 0;
-        for (int i = satir - 1; i <= satir + 1; i++) {
-            for (int j = sutun - 1; j <= sutun + 1; j++) {
+        for (int i = baslangicSatir; i <= bitisSatir; i++) {
+            for (int j = baslangicSutun; j <= bitisSutun; j++) {
                 if (mayinBulunacakTarla[i][j].equals(" * ")) {
                     sayac++;
                 }
