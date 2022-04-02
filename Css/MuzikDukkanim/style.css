@@ -1,0 +1,15 @@
+.content {
+    list-style-position: inside;
+}
+
+h1,h2,h3,#urunler{
+    text-align: center;
+}
+.nav
+{
+    margin-left: 40%;
+}
+.navbar-item
+{
+    margin-left:1%
+}
