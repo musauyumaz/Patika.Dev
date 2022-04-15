@@ -1,0 +1,39 @@
+.container {
+    text-align: center;
+    margin: auto;
+    width: 90%;
+  }
+  
+  .main {
+    background-color: #EEEEEE;
+  }
+  
+  .bottom {
+    margin-top: 5px;
+  }
+  
+  .box {
+    float: left;
+    width: 33%;
+    height: 100px;
+    margin-left: 2px;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .clearfix {
+    clear: both;
+  }
+  
+  .copyright {
+    margin-top: 120px;
+  }
