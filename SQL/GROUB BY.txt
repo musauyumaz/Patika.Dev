@@ -1,0 +1,14 @@
+-- belirli sütundaki unique verilere karşılık gelen ifadeleri bulmak için GROUP BY kullanırız 
+
+-- SELECT rental_rate,COUNT(*) FROM film -- ya GROUP BY da kullanılan sütun ismi ya da bir aggregrade fonksiyon yazabiliriz
+-- GROUP BY rental_rate;
+
+-- SELECT rating,COUNT(*) FROM film
+-- GROUP BY rating; --her bir rating'e karşılık gelen
+
+-- SELECT replacement_cost,MIN(length) FROM film
+-- GROUP BY replacement_cost;
+
+-- SELECT replacement_cost,rental_rate,MIN(length) FROM film
+-- GROUP BY replacement_cost,rental_rate
+-- ORDER BY MIN(length);

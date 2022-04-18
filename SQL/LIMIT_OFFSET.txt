@@ -1,0 +1,19 @@
+-- SELECT * FROM film
+-- WHERE rental_rate = 4.99 -- koşullara göre verileri alıyoruz
+-- ORDER BY length -- aldığımız verileri sıralıyoruz
+-- LIMIT 20; -- görmek istediğimiz veri sayısına sınır getiriyoruz
+
+-- SELECT * FROM film
+-- WHERE replacement_cost = 14.99 AND rental_rate = 0.99
+-- ORDER BY length DESC
+-- LIMIT 7;
+
+-- SELECT * FROM country
+-- OFFSET 6 -- Verileri geçmek için kullanırız yani verileri atlarız
+-- LIMIT 4;
+
+-- SELECT * FROM actor
+-- WHERE first_name ='Penelope'
+-- ORDER BY last_name
+-- OFFSET 2
+-- LIMIT 1;
