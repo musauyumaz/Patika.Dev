@@ -1,0 +1,45 @@
+-- SELECT * FROM author
+-- ORDER BY id ASC;
+
+-- CREATE TABLE book
+-- (
+-- 	id SERIAL PRIMARY KEY,
+-- 	title VARCHAR(100) NOT NULL,
+-- 	page_number INTEGER NOT NULL,
+-- 	author_id INTEGER REFERENCES author(id)
+-- );
+
+-- SELECT * FROM book
+-- SELECT * FROM author
+-- insert into book (title, page_number, author_id) values ('Robbins'' Milkvetch', 913, 4);
+-- insert into book (title, page_number, author_id) values ('Leucodon Moss', 666, 7);
+-- insert into book (title, page_number, author_id) values ('Largeleaf Avens', 316, 5);
+-- insert into book (title, page_number, author_id) values ('Sheathed Sedge', 555, 8);
+-- insert into book (title, page_number, author_id) values ('Connecticut Blackberry', 413, 10);
+-- insert into book (title, page_number, author_id) values ('Hyacinth Meadow Garlic', 670, 5);
+-- insert into book (title, page_number, author_id) values ('Banff Bluegrass', 816, 2);
+-- insert into book (title, page_number, author_id) values ('Birdnest Fern', 562, 7);
+-- insert into book (title, page_number, author_id) values ('Fivepetal Leaf-flower', 539, 1);
+-- insert into book (title, page_number, author_id) values ('Hispanic Hyacinthoides', 805, 5);
+-- insert into book (title, page_number, author_id) values ('Ruth''s Littlebrownjug', 833, 1);
+-- insert into book (title, page_number, author_id) values ('Herbwilliam', 258, 2);
+-- insert into book (title, page_number, author_id) values ('Fewflower Nutrush', 564, 11);
+-- insert into book (title, page_number, author_id) values ('Ricinus', 202, 11);
+-- insert into book (title, page_number, author_id) values ('Cascade Calicoflower', 443, 3);
+
+-- SELECT * FROM book
+-- JOIN author ON author.id = book.author_id;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

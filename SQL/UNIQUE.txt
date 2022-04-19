@@ -1,0 +1,12 @@
+-- INSERT INTO users(username,email,age)
+-- VALUES 
+-- 	('tester2','gamer@gmail.com',44);
+-- SELECT * FROM users
+
+-- ALTER TABLE users
+-- ADD UNIQUE(email);
+
+-- INSERT INTO users(username,email,age)
+-- VALUES 
+-- 	('tester3','gamer3@gmail.com',55);
+-- SELECT * FROM users

@@ -1,0 +1,43 @@
+-- CREATE TABLE <table_name>(
+-- 	<column_name> <data_type> <constraint>,
+-- 	...
+-- 	<column_name> <data_type> <constraint>;
+-- )
+
+-- CREATE TABLE author(
+-- 	id SERIAL PRIMARY KEY,
+-- 	first_name VARCHAR(50) NOT NULL,
+-- 	last_name VARCHAR(50) NOT NULL,
+-- 	email VARCHAR(100),
+-- 	birthday DATE
+-- );
+
+-- SELECT * FROM author
+
+-- INSERT INTO author(first_name,last_name,email,birthday) 
+-- VALUES
+-- ('Haruki','Murakami','haruki@murakami.com','1948-11-07'),
+-- ('Sabahattin','Ali','sabahattin@ali.com','1914-07-11'),
+-- ('Orhan','Pamuk','orhan@pamuk.com','1950-04-14'),
+-- ('Halide Edip','Adıvar','halide@edip.com','1884-07-11'),
+-- ('Zygmunt','Bauman','zygmunt@ali.com','1911-07-12');
+
+-- SELECT * FROM author
+
+
+-- CREATE TABLE author2 (LIKE author); -- Veritabanında bulunan tabloyu yapı olarak kopyalama
+-- SELECT * FROM author2
+
+-- INSERT INTO author2 -- Veritabanında bulunan diğer tablodan bu tabloya veri kopyalama
+-- SELECT * FROM author
+-- WHERE author.first_name = 'Sabahattin'; 
+
+-- SELECT * FROM author2;
+
+-- CREATE TABLE author3 AS -- Verileri tablonun hem yapısı hem de verileriyle birlikte klonlama
+-- SELECT * FROM author;
+
+-- SELECT * FROM author3
+
+-- DROP TABLE IF EXISTS author3;
+-- DROP TABLE author2;
