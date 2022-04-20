@@ -1,0 +1,12 @@
+-- SELECT first_name,last_name,title FROM book
+-- FULL JOIN author ON author.id = book.author_id;
+
+-- SELECT * FROM book
+-- FULL OUTER JOIN author ON author.id = book.author_id;
+
+-- SELECT first_name,last_name,title FROM book
+-- FULL JOIN author ON author.id = book.author_id
+-- WHERE (book.id IS NOT NULL) AND (author.id IS NOT NULL);
+
+-- SELECT * FROM book
+-- INNER JOIN author ON book.author_id = author.id;

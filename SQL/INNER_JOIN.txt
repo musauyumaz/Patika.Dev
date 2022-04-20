@@ -1,0 +1,2 @@
+SELECT book.title,author.first_name,author.last_name FROM book
+INNER JOIN author ON author.id = book.author_id;
