@@ -1,0 +1,15 @@
+-- SELECT author.first_name,author.last_name,book.title,book.page_number FROM author
+-- INNER JOIN book ON book.author_id = author.id
+-- WHERE book.page_number > 
+-- (
+-- 	SELECT AVG(page_number) FROM book
+-- )
+-- ORDER BY book.page_number DESC;
+
+-- SELECT a.first_name,a.last_name,f.title,f.length FROM film f
+-- INNER JOIN film_actor fa ON fa.film_id = f.film_id 
+-- INNER JOIN actor a ON fa.actor_id = a.actor_id
+-- WHERE f.length = 
+-- (
+-- 	SELECT MAX(length) FROM film
+-- );

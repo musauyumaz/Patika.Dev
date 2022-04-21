@@ -1,0 +1,16 @@
+-- SELECT * FROM book;
+
+-- SELECT first_name,last_name
+-- FROM author
+-- WHERE id > ANY -- Herhangi bir koşul doğruysa değeri döndürür
+-- (
+-- 	SELECT id FROM book WHERE title = 'Sheathed Sedge' OR title = 'Largeleaf Avens'
+-- );
+
+
+-- SELECT first_name,last_name
+-- FROM author
+-- WHERE id = ALL -- Tablodaki her bir satırla eşleşme sağlanırsa o zaman değerleri döndürür diğer türlü değer döndürmez 
+-- (
+-- 	SELECT id FROM book WHERE title = 'Sheathed Sedge' OR title = 'Largeleaf Avens'
+-- );

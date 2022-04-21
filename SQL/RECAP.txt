@@ -1,0 +1,34 @@
+-- SELECT * FROM film;
+-- 1. İsminde en az 4 tane e veya E bulunan kaç film vardır ?
+
+-- SELECT COUNT(*) FROM film
+-- WHERE title ILIKE '%E%E%E%E' ;
+
+-- 2. Kategori isimlerini ve kategori başına düşen film sayısını yazınız
+
+-- SELECT category."name",COUNT(*) FROM category
+-- INNER JOIN film_category ON film_category.category_id = category.category_id
+-- INNER JOIN film ON film.film_id = film_category.film_id
+-- GROUP BY category."name";
+
+-- 3. En çok film bulunan rating kategorisini yazınız
+
+-- SELECT rating,COUNT(*) FROM film
+-- GROUP BY rating
+-- ORDER BY COUNT(*) DESC
+-- LIMIT 1;
+
+-- Film tablosunda 'K' karakteri ile başlayan en uzun ve replacement_cost en az olan 3 filmi sıralayınız?
+
+-- SELECT title,length,replacement_cost FROM film
+-- WHERE title LIKE 'K%'
+-- ORDER BY length DESC, replacement_cost ASC
+-- LIMIT 3;
+
+-- 4. En Çok Alışveriş yapan müşterinin adı nedir?
+
+-- SELECT first_name,last_name FROM customer
+-- JOIN payment ON payment.customer_id = customer.customer_id
+-- GROUP BY  DISTINCT payment.customer_id,first_name,last_name
+-- ORDER BY SUM(amount) DESC
+-- LIMIT 1;
