@@ -1,0 +1,1 @@
+console.log("Önemli Bir Bildirim TEST.JS");
